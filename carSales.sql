@@ -23,10 +23,10 @@ CREATE TABLE IF NOT EXISTS carros (
     FOREIGN KEY (usuario_id) REFERENCES usuarios(id)
 );
 
-INSERT INTO usuarios (email, senha, nome, sobrenome)
-VALUES ('rafael.devco@gmail.com', '12345678', 'Rafael', 'Barbosa'),
-       ('susugpb@gmail.com', '12345678', 'Suzana', 'Guimaraes'),
-       ('paulin56@gmail.com', '12345678', 'Paulo', 'Alves');
+INSERT INTO usuarios (nome, sobrenome, email, senha)
+VALUES ('Rafael', 'Barbosa', 'rafael.devco@gmail.com', '12345678'),
+       ('Suzana', 'Guimaraes', 'susugpb@gmail.com', '12345678'),
+       ('Paulo', 'Alves', 'paulin56@gmail.com', '12345678');
 
 INSERT INTO carros (usuario_id, marca, modelo, ano, placa, chassi, renavam)
 VALUES (1, 'Ferrari', '488', '2020', 'RLF0369', '9RFLH87D8D9375HS6', 'P26478HF78F'),
