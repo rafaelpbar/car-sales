@@ -19,7 +19,7 @@ const toGetAllCars = async () => {
   );
 };
 
-const toGetByMarca = async (query) => {
+const getByQuery = async (query) => {
   const dataBase = await connect();
   const fetch = await dataBase
     .getTable('carros')
@@ -96,8 +96,8 @@ const toDeleteCar = async (id) => {
 
 module.exports = {
   toGetAllCars,
-  toGetByMarca,
+  getByQuery,
   toRegisterCar,
   toUpdateCar,
-  toDeleteCar
+  toDeleteCar,
 };
