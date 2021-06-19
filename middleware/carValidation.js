@@ -1,4 +1,4 @@
-const errorMessage = (msg) => ({ message: msg });
+/* const errorMessage = (msg) => ({ message: msg });
 
 const carRegex = ^\w+$;
 
@@ -43,4 +43,4 @@ const checkRenavam = async (req, res, next) => {
 
 module.exports = {
   checkMarca, checkModelo, checkAno, checkPlaca, checkChassi, checkRenavam
-};
+}; */
