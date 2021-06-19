@@ -11,7 +11,7 @@ const config = {
   socketPath: '/var/run/mysqld/mysqld.sock',
 };
 
-const connection = async () => {
+module.exports = async () => {
   if (connect) return Promise.resolve(connect);
   try {
     const session = await mysqlx.getSession(config);
@@ -22,16 +22,3 @@ const connection = async () => {
     return process.exit(1);
   }
 };
-
-module.exports = connection;
-
-/* const mysql = require('mysql2/promise');
-
-const connection = mysql.createPool({
-  host: 'localhost',
-  user: 'root',
-  password: '27Rafa**',
-  database: 'carsales',
-}); 
-
-module.exports = connection; */

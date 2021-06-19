@@ -2,15 +2,14 @@ const express = require('express');
 
 const app = express();
 
-const PORT = process.env.PORT || 3000;
+// const PORT = process.env.PORT || 3000;
 
 const userController = require('./controllers/userController');
 
-app.get('/', (_req, res) => {
-  return res.render('home');
-});
+const carController = require('./controllers/carController');
 
-app.use('/users', userController);
+app.use('/usuarios', userController);
 
+app.use('/carros', carController);
 
-app.listen(PORT, () => console.log('Listening on 3000'));
+app.listen(4000, () => console.log('Listening on 4000'));

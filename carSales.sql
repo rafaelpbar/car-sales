@@ -5,21 +5,21 @@ USE carsales;
 
 CREATE TABLE IF NOT EXISTS usuarios (
 	id INT NOT NULL PRIMARY KEY AUTO_INCREMENT,
-    email VARCHAR(100) NOT NULL,
-    senha VARCHAR(100) NOT NULL,
-    nome VARCHAR(100) NOT NULL,
-    sobrenome VARCHAR(100) NOT NULL
+    nome VARCHAR(30) NOT NULL,
+    sobrenome VARCHAR(30) NOT NULL
+    email VARCHAR(30) NOT NULL,
+    senha VARCHAR(30) NOT NULL,
 );
 
 CREATE TABLE IF NOT EXISTS carros (
 	id INT NOT NULL PRIMARY KEY AUTO_INCREMENT,
     usuario_id INT NOT NULL,
-    marca VARCHAR(100) NOT NULL,
-    modelo VARCHAR(100) NOT NULL,
-    ano VARCHAR(100) NOT NULL,
-    placa VARCHAR(100) NOT NULL,
-    chassi VARCHAR(100) NOT NULL,
-    renavam VARCHAR(100) NOT NULL,
+    marca VARCHAR(30) NOT NULL,
+    modelo VARCHAR(30) NOT NULL,
+    ano VARCHAR(30) NOT NULL,
+    placa VARCHAR(30) NOT NULL,
+    chassi VARCHAR(30) NOT NULL,
+    renavam VARCHAR(30) NOT NULL,
     FOREIGN KEY (usuario_id) REFERENCES usuarios(id)
 );
 

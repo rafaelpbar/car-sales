@@ -9,4 +9,11 @@ userRoute.post('/', async (req, res) => {
   res.status(201).json(user);
 });
 
+userRoute.get('/', async (req, res) => {
+  const email = req.query;
+  const user = await userModel.getUserMail(email);
+  if (user.err) return res.status(400).json('Não achei!');
+  res.status(201).json({'user': user});
+})
+
 module.exports = userRoute;
